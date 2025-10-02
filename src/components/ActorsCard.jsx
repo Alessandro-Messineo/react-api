@@ -1,5 +1,5 @@
 export default function ActorsCard(props) {
- const { actor } = props;
+    const { actor } = props;
 
     return (
         <div className="actor-card">
