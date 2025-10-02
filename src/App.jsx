@@ -1,10 +1,11 @@
+import ActorsList from "./components/ActorsList"
 
 function App() {
   
 
   return (
     <>
-      
+      <ActorsList />
     </>
   )
 }
