@@ -17,21 +17,22 @@ export default function ActorsList() {
         , [])
 
     return (
-        <>
-            {actors.map((actor) => (
-                <div className="character" >
-                    <div>
+        <div className="container">
+            {actors.map((actor, index) => (
+                <div className="actor-card" key={index}>
+                    <div className="actor-image">
                         <img src={actor.image} alt={actor.name} />
                     </div>
-                    <div>
-                        <p>{actor.name}</p>
-                        <p>Anno di nascita:{actor.birth_year}</p>
-                        <p>Nazionalità: {actor.nationality}</p>
-                        <p>Biografia: {actor.biography}</p>
-                        <p>Riconoscimenti: {actor.awards}</p>
+                    <div className="actor-info">
+                        <h2>{actor.name}</h2>
+                        <p className="info">Anno di nascita: <span className="info-span">{actor.birth_year}</span></p>
+                        <p className="info">Nazionalità: <span className="info-span">{actor.nationality}</span></p>
+                        <p className="info">Biografia: <span className="info-span">{actor.biography}</span></p>
+                        <p className="info">Riconoscimenti: <span className="info-span">{actor.awards.join(", ")}</span></p>
                     </div>
                 </div>
+
             ))}
-        </>
+        </div>
     )
 }
